@@ -29,7 +29,7 @@ func (e ParameterTypeError) Error() string {
 	return "Expected parameter of type " + e.Expected + ", got " + e.Parameter
 }
 
-// FileError is an abstraction of CouldntReadError and CouldntWriteError
+// PathError is an abstraction of CouldntReadError and CouldntWriteError
 func PathError(path string, err error, action string) {
 	if err != nil {
 		log.WithFields(log.Fields{

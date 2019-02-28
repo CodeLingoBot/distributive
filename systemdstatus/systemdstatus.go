@@ -21,7 +21,7 @@ func ServiceLoaded(name string) (bool, error) {
 	return strings.Contains(string(out), "LoadState=loaded"), nil
 }
 
-// ServiceLoaded returns whether or not the given systemd service has
+// ServiceActive returns whether or not the given systemd service has
 // ActiveState=active
 func ServiceActive(name string) (bool, error) {
 	cmd := exec.Command("systemctl", "show", "-p", "ActiveState", name)

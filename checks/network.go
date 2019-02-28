@@ -540,7 +540,7 @@ func (chk UDPTimeout) Status() (int, string, error) {
 	return 1, fmt.Sprintf("Couldn't connect to %s", chk.address), nil
 }
 
-// returns a column of the routing table as a slice of strings
+// RoutingTableColumn returns a column of the routing table as a slice of strings
 // TODO read from /proc/net/route instead
 func RoutingTableColumn(name string) []string {
 	cmd := exec.Command("route", "-n")

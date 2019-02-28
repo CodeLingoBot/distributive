@@ -85,7 +85,7 @@ func FreeMemory(units string) (int, error) {
 	return swapOrMemory("free", "memory", units)
 }
 
-// FreeMemory returns the amount of memory that's currently unoccupied.
+// UsedMemory returns the amount of memory that's currently unoccupied.
 // units : b, kb, mb, gb, tb, percent
 func UsedMemory(units string) (int, error) {
 	if strings.ToLower(units) == "percent" {
